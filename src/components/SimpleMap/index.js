@@ -46,7 +46,7 @@ const SimpleMap = (props) => {
     // Important! Always set the container height explicitly
     <div style={{ height: '800px', width: '100%' }}>
       <GoogleMapReact
-        //bootstrapURLKeys={{ key: 'AIzaSyDwQeeSXhXP8nUUolqB32YTWmz2xhaLQks' }}
+        //bootstrapURLKeys={{ key: '' }}
         defaultCenter={props.center}
         defaultZoom={props.zoom}
         onChildMouseEnter={props.onChildMouseEnter}
