@@ -14,12 +14,19 @@ function App() {
   }, [location]);
 
   return (
-    <div className="App">
-      <SimpleMap
-        center={location}
-        zoom={6}
-      />
-    </div>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-9 App__no-padding">
+              <SimpleMap
+                center={location}
+                zoom={6}
+              />
+            </div>
+          <div className="col-3 App__no-padding">
+
+          </div>
+        </div>
+      </div>
   );
 }
 
