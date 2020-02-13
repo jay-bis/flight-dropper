@@ -1,0 +1,45 @@
+.RadiusSlider-container {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.RadiusSlider__rad-text {
+    padding: 15px;
+    font-size: large;
+}
+
+.RadiusSlider__slider {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 13px;
+    border: 2px solid rgb(58, 57, 57);
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.RadiusSlider__slider:hover {
+    opacity: 1;
+}
+
+.RadiusSlider__slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(21, 154, 77);
+    cursor: pointer;
+}
+
+.RadiusSlider__slider::-moz-slider-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(21, 154, 77);
+    cursor: pointer;
+}

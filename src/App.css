@@ -32,6 +32,12 @@
   padding: 0px;
 }
 
+.App__sidebar-bg {
+  border: 2px solid gray;
+  border-radius: 3px;
+  background: linear-gradient(110deg, #94d4ad 60%, #bbfa7f 60%);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

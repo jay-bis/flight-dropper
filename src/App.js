@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SimpleMap from '../src/components/SimpleMap';
+import RadiusSlider from '../src/components/RadiusSlider';
 import getLocation from './utils/getLocation';
 import './App.css';
 
@@ -22,8 +23,8 @@ function App() {
                 zoom={6}
               />
             </div>
-          <div className="col-3 App__no-padding">
-
+          <div className="col-3 App__no-padding App__sidebar-bg">
+              <RadiusSlider />
           </div>
         </div>
       </div>
