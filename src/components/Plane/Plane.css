@@ -1,0 +1,8 @@
+.Plane__hover-anim {
+    animation: animateColor 2s ease forwards;
+}
+
+@keyframes animateColor {
+    0% { fill: "#159A4D" }
+    100% { fill: "94E08E" }
+}

@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import SimpleMap from '../src/components/SimpleMap';
+import getLocation from './utils/getLocation';
 import './App.css';
 
 function App() {
+
+  const [location, setLocation] = React.useState({ lat: 0, lng: 0});
+
+  React.useEffect(() => {
+    const loc = getLocation();
+    setLocation(loc);
+  }, [location]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SimpleMap
+        center={location}
+        zoom={6}
+      />
     </div>
   );
 }
