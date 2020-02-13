@@ -10,6 +10,7 @@ import {
     planeSVGStyleHover    
 } from './styles';
 
+// pixelCoordinate = worldCoordinate * 2^Zoom
 const Plane = (props) => {
 
     const pathStyle = props.$hover ? planePathStyleHover : planePathStyle

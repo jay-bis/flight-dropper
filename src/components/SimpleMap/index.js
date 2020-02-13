@@ -54,7 +54,6 @@ const SimpleMap = (props) => {
         onChildMouseDown={onChildMouseDown}
         onChildMouseUp={onChildMouseUp}
         onChildMouseMove={onChildMouseMove}
-
         hoverDistance={K_SIZE}
         draggable={canDrag}
       >

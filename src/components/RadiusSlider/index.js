@@ -1,15 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { updateRadius } from './actions';
 import './RadiusSlider.css';
 
 // props might be func to take radius and use it somewhere else,
 // change max radius, etc
 const RadiusSlider = props => {
 
-    const [radius, setRadius] = React.useState(1);
+    const [radius, setRadius] = React.useState(50);
 
     const getSliderValue = event => {
         const element = event.target;
         setRadius(parseInt(element.value));
+        props.updateRad(parseInt(element.value));
     }
 
     return (
@@ -19,19 +23,23 @@ const RadiusSlider = props => {
                 <br />
                 <input 
                     className="RadiusSlider__slider" 
-                    min="10" 
+                    min="50" 
                     value={radius}
-                    max="250" 
+                    max="400" 
                     type="range" 
                     id="radSlider"
                     onChange={(e) => getSliderValue(e)} 
                 />
             </div>
             <div className="RadiusSlider__rad-text">
-                Current radius: {radius} mi.
+                Current radius: {radius}
             </div>
         </div>
     )
 };
 
-export default RadiusSlider;
+const mapDispatchToProps = dispatch => ({
+    updateRad: rad => dispatch(updateRadius(rad))
+});
+
+export default connect(null, mapDispatchToProps)(RadiusSlider);
